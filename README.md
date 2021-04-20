@@ -11,6 +11,6 @@ Steps to reproduce:
   https://localhost:8443/greeting
     * you should see "`Hello, `" (where you'd expect to see the certificate identity after the comma)
 
-Then, you can remove `%issue` from the `quarkus.http.ssl.client-auth` property in `application.properties` and attempt again, and you should see the 
+Then, you can remove `%issue` from the `quarkus.http.ssl.client-auth` property in `application.properties` and attempt again (don't forget to `./gradlew build` again), and you should see the 
 identity show in the response. You can verify that the profile is loading by adding another `%issue` property (like
 changing the truststore to an invalid directory to force an error)
